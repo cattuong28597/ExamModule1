@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="array">Chuỗi nhập vào là: </div>
+    <div id="vowel">Số nguyên âm trong chuỗi là: </div>
+   <script>
+       let arr = ['a', 'o', 'e', 'u', 'i'];
+       let letter = prompt('Enter the string: ');
+       let count = 0;
+       function check() {
+        let string = letter.split('');
+        // console.log(string);
+        for(i = 0; i < string.length; i++) {
+            for (j = 0; j < arr.length; j++) {
+                if (string[i] == arr[j]) {
+                    count += 1;
+                } 
+            }
+        }
+        document.getElementById('array').innerHTML += letter;
+        document.getElementById('vowel').innerHTML += count;
+       }
+       check();
+   </script>
+</body>
+</html>
